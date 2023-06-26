@@ -1,124 +1,138 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Admin Page</title>
-</head>
-<body>
-  <div class="container">
-    <h1>Admin</h1>
-    <form>
-      <div class="form-group">
-        <label for="id">ID:</label>
-        <input type="text" id="id" name="id" placeholder="Enter your ID">
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Login Form</title> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="title"><span>Login Form</span></div>
+        <form action="#">
+          <div class="row">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Email or Phone" required>
+          </div>
+          <div class="row">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" required>
+          </div>
+          <div class="row button">
+            <input type="submit" value="Login">
+          </div>
+        </form>
       </div>
-      <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" placeholder="Enter your password">
-        <p id="parainc"></p>
-      </div>
-      <a href="#" onclick="login()" class="btn animated-border">Login</a>
-    </form>
-  </div>
-  <style>
-    body {
-      background-color: #f1f1f1;
-      font-family: Arial, sans-serif;
-    }
-
-    .container {
-      max-width: 400px;
-      margin: 100px auto;
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-
-    .form-group input[type="text"],
-    .form-group input[type="password"] {
-      width: 90%;
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #2d5dc6;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #0a395d;
-    }
-
-    .animated-border {
-      position: relative;
-    }
-
-    .animated-border:before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background-color: #4CAF50;
-      transition: width 0.3s;
-    }
-
-    .animated-border:hover:before {
-      width: 100%;
-    }
-    .parainc{
-      color: red;
-    }
-      @media (max-width: 1000px) {
-     .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 400px;
-    width: 500px;
-  }}
-  </style>
-  <script>
-    function login() {
-      var idInput = document.getElementById('id');
-      var passwordInput = document.getElementById('password');
-      var incorrect = document.getElementById('parainc');
-
-      var id = idInput.value;
-      var password = passwordInput.value;
-
-      if (password === 'promptengineer' && (id === 'Aadarsh' || id === 'Aaradhy')) {
-        window.location.href = 'admin1.html'; 
-      }
-       else {
-        incorrect.innerHTML = "Incorrect password";
-        incorrect.style.color = "red";
-      }
-    }
-  </script>
-</body>
+    </div>
+   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  background: white;
+  overflow: hidden;
+}
+.container{
+  max-width: 440px;
+  padding: 0 20px;
+  margin: 170px auto;
+}
+.wrapper{
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+}
+.wrapper .title{
+  height: 90px;
+  background: #418ce1;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper form{
+  padding: 30px 25px 25px 25px;
+}
+.wrapper form .row{
+  height: 45px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.wrapper form .row input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 60px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+form .row input:focus{
+  border-color: #418ce1;
+  box-shadow: inset 0px 0px 2px 2px rgba(19, 36, 113, 0.25);
+}
+form .row input::placeholder{
+  color: #999;
+}
+.wrapper form .row i{
+  position: absolute;
+  width: 47px;
+  height: 100%;
+  color: #fff;
+  font-size: 18px;
+  background: #418ce1;
+  border: 1px solid #418ce1;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper form .pass{
+  margin: -8px 0 20px 0;
+}
+.wrapper form .pass a{
+  color: #418ce1;
+  font-size: 17px;
+  text-decoration: none;
+}
+.wrapper form .pass a:hover{
+  text-decoration: underline;
+}
+.wrapper form .button input{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  background: #418ce1;
+  border: 1px solid #418ce1;
+  cursor: pointer;
+}
+form .button input:hover{
+  background: #418ce1;
+}
+.wrapper form .signup-link{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 17px;
+}
+.wrapper form .signup-link a{
+  color: #418ce1;
+  text-decoration: none;
+}
+form .signup-link a:hover{
+  text-decoration: underline;
+}
+   </style>
+  </body>
 </html>
